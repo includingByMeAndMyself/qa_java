@@ -19,6 +19,9 @@ public class Feline extends Animal implements Predator {
     }
 
     public int getKittens(int kittensCount) {
+        if (kittensCount < 0) {
+            throw new IllegalArgumentException("Количество котят не может быть отрицательным");
+        }
         return kittensCount;
     }
 
